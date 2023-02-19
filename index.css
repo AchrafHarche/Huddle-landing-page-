@@ -78,7 +78,7 @@ aside p {
 }
 
 aside button {
-    padding: 9px 40px;
+    padding: 12px 50px;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -162,9 +162,9 @@ footer {
     }
 
     aside p {
-        font-size: 12px;
+        font-size: 13px;
         text-align: center;
-        line-height: 1.6;
+        line-height: 1.7;
     }
 
     aside button {
