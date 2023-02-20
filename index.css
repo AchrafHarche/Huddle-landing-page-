@@ -155,7 +155,8 @@ footer .sm {
         background-repeat: no-repeat;
         background-size: contain;
         min-height: 100vh;
-        grid-template-rows: 50px 1fr 1fr 100px;
+        display: flex;
+        flex-direction: column;
         padding: 1rem;
 
 
@@ -229,10 +230,10 @@ footer .sm {
         height: 35px;
     }
 
-    .attribution {
-        font-size: 11px;
+    div .attribution {
+        font-size: 10px;
         text-align: center;
         font-weight: 600;
-        margin-top: 2rem;
+        margin-top: 4rem;
     }
 }
