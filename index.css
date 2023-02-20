@@ -15,6 +15,8 @@ body {
     background-size: contain;
     padding: 3rem;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 
 
 }
@@ -23,16 +25,16 @@ body {
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: 100px 1fr 100px;
+    grid-template-rows: 100px auto 50px;
     grid-template-areas: "logo logo . . . . . . . ."
         "cont cont cont cont cont cont side side side side"
-        ". . . foot foot foot foot . . . "
+        ". . . . . . . . . foot"
     ;
 
 
 }
 
-.attribution {
+footer {
     grid-area: foot;
 }
 
@@ -95,19 +97,55 @@ aside button:hover {
 
 }
 
-footer {
-    grid-area: foor;
+footer .sm {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
 }
+
+.sm div .fa-facebook-f, div .fa-twitter, div .fa-instagram {
+
+    font-size: 1.6rem;
+    color: hsla(0, 0%, 100%, 0.833);
+
+}
+
+.sm div a i:hover {
+    color: rgb(94, 2, 69);
+}
+
+.sm div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 2px hsla(300, 23%, 81%, 0.598);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-right: 1.5rem;
+
+
+    width: 50px;
+    height: 50px;
+}
+
+
 
 
 
 .attribution {
-    font-size: 11px;
+    font-size: 13px;
     text-align: center;
+    font-weight: 600;
+    margin-top: 2rem;
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: hsl(229, 28%, 26%);
 }
 
 @media only screen and (max-width: 640px) {
@@ -117,7 +155,7 @@ footer {
         background-repeat: no-repeat;
         background-size: contain;
         min-height: 100vh;
-        grid-template-rows: 50px 1fr 1fr;
+        grid-template-rows: 50px 1fr 1fr 100px;
         padding: 1rem;
 
 
@@ -125,8 +163,12 @@ footer {
 
     .container {
         height: 100vh;
-        grid-template-areas: "logo logo logo logo logo . . . . . "
-            ". cont cont cont cont cont cont cont cont . "". side side side side side side side side .";
+        grid-template-rows: 100px 1fr 1fr 50px;
+        grid-template-areas:
+            "logo logo logo logo logo . . . . . "
+            ". cont cont cont cont cont cont cont cont . "
+            ". side side side side side side side side ."
+            ". . . foot foot foot foot . . .";
 
         justify-content: center;
         align-items: center;
@@ -136,25 +178,25 @@ footer {
     nav img {
         max-width: 100%;
         justify-content: flex-start;
-        margin-bottom: -2rem;
+        /* margin-bottom: -2rem; */
 
     }
 
     aside {
         display: flex;
         flex-direction: column;
-        padding: 0;
+
         justify-content: center;
     }
 
 
     section img {
-        margin-top: -30rem;
+        margin-top: -2rem;
         max-width: 100%;
     }
 
     aside h2 {
-        margin-top: -15rem;
+
         padding: 0;
         font-size: 22px;
         text-align: center;
@@ -171,7 +213,26 @@ footer {
         width: 70%;
         justify-content: center;
         margin: 0 auto;
-
-        ;
+        margin-bottom: 2rem;
 
     }
+
+    .sm div .fa-facebook-f, div .fa-twitter, div .fa-instagram {
+        margin-top: -2rem;
+        font-size: 1rem;
+        color: hsla(0, 0%, 100%, 0.833);
+    }
+
+    .sm div {
+        margin-right: 0;
+        width: 35px;
+        height: 35px;
+    }
+
+    .attribution {
+        font-size: 11px;
+        text-align: center;
+        font-weight: 600;
+        margin-top: 2rem;
+    }
+}
