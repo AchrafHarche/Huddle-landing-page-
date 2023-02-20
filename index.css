@@ -25,13 +25,18 @@ body {
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: 100px auto 50px;
+    grid-template-rows: 100px 400px 50px 50px;
     grid-template-areas: "logo logo . . . . . . . ."
         "cont cont cont cont cont cont side side side side"
         ". . . . . . . . . foot"
+        ". . att att att att att att . .";
     ;
 
 
+}
+
+article {
+    grid-area: att;
 }
 
 footer {
@@ -45,7 +50,7 @@ nav {
 
 section {
     grid-area: cont;
-    max-height: 50%;
+    max-height: 40%;
 
 }
 
@@ -58,7 +63,7 @@ section img {
 aside {
     grid-area: side;
     max-width: 100%;
-    max-height: 50%;
+    max-height: 40%;
     padding: 2 4rem;
     line-height: 1.2;
     color: white;
@@ -165,12 +170,13 @@ footer .sm {
 
     .container {
         height: 100vh;
-        grid-template-rows: 100px 1fr 1fr 50px;
+        grid-template-rows: 100px 1fr 1fr 50px 50px;
         grid-template-areas:
             "logo logo logo logo logo . . . . . "
             ". cont cont cont cont cont cont cont cont . "
             ". side side side side side side side side ."
-            ". . . foot foot foot foot . . .";
+            ". . . foot foot foot foot . . ."
+            ". . att att att att att att . .";
 
         justify-content: center;
         align-items: center;
@@ -180,7 +186,7 @@ footer .sm {
     nav img {
         max-width: 100%;
         justify-content: flex-start;
-        /* margin-bottom: -2rem; */
+
 
     }
 
@@ -198,9 +204,9 @@ footer .sm {
     }
 
     aside h2 {
-
+        margin-top: 4rem;
         padding: 0;
-        font-size: 22px;
+        font-size: 21px;
         text-align: center;
         line-height: 1.4
     }
@@ -220,7 +226,7 @@ footer .sm {
     }
 
     .sm div .fa-facebook-f, div .fa-twitter, div .fa-instagram {
-        margin-top: -2rem;
+        /* margin-top: -2rem; */
         font-size: 1rem;
         color: hsla(0, 0%, 100%, 0.833);
     }
